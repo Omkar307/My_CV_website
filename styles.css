@@ -1,3 +1,4 @@
+/* General styling */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -13,31 +14,76 @@ header {
     text-align: center;
 }
 
-.header-content {
-    max-width: 800px;
-    margin: 0 auto;
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
 }
 
-.section {
-    background-color: #fff;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    border-radius: 5px;
-    overflow: hidden;
+nav ul li {
+    margin: 0 10px;
 }
 
-.section-content {
-    padding: 20px;
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
 }
 
-ul {
+/* Hover effect for navigation links */
+nav ul li a:hover {
+    background-color: #555; /* Change background color on hover */
+}
+
+section {
+    display: none;
+    padding: 20px; /* Added padding for better visibility of the background color */
+}
+
+section.active {
+    display: block;
+}
+
+.dropdown {
+    display: flex;
+    flex-wrap: wrap;
     list-style-type: none;
     padding: 0;
+    margin-top: 10px;
 }
 
-a {
-    color: #007bff;
-    text-decoration: none;
+.dropdown li {
+    margin-right: 20px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer; /* Set cursor to pointer for dropdown items */
+}
+
+/* Hover effect for dropdown items */
+.dropdown li:hover {
+    animation: dance 0.5s ease forwards; /* Apply dance animation on hover */
+}
+
+@keyframes dance {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    25% {
+        transform: rotateZ(10deg);
+    }
+    50% {
+        transform: rotateZ(-10deg);
+    }
+    75% {
+        transform: rotateZ(5deg);
+    }
+    100% {
+        transform: rotateZ(0deg);
+    }
 }
 
 footer {

@@ -3,8 +3,8 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: #333;
+    color: #ffffff;
 }
 
 header {
@@ -32,17 +32,20 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     padding: 10px;
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    transition: background-color 0.3s ease;
+    /* Smooth transition for background color */
 }
 
 /* Hover effect for navigation links */
 nav ul li a:hover {
-    background-color: #555; /* Change background color on hover */
+    background-color: #555;
+    /* Change background color on hover */
 }
 
 section {
     display: none;
-    padding: 20px; /* Added padding for better visibility of the background color */
+    padding: 20px;
+    /* Added padding for better visibility of the background color */
 }
 
 section.active {
@@ -51,7 +54,7 @@ section.active {
 
 .dropdown {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     list-style-type: none;
     padding: 0;
     margin-top: 10px;
@@ -59,29 +62,35 @@ section.active {
 
 .dropdown li {
     margin-right: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     transition: transform 0.3s ease;
-    cursor: pointer; /* Set cursor to pointer for dropdown items */
+    cursor: pointer;
+    /* Set cursor to pointer for dropdown items */
 }
 
 /* Hover effect for dropdown items */
 .dropdown li:hover {
-    animation: dance 0.5s ease forwards; /* Apply dance animation on hover */
+    animation: dance 0.5s ease forwards;
+    /* Apply dance animation on hover */
 }
 
 @keyframes dance {
     0% {
         transform: rotateZ(0deg);
     }
+
     25% {
         transform: rotateZ(10deg);
     }
+
     50% {
         transform: rotateZ(-10deg);
     }
+
     75% {
         transform: rotateZ(5deg);
     }
+
     100% {
         transform: rotateZ(0deg);
     }
@@ -92,4 +101,18 @@ footer {
     color: #fff;
     padding: 10px;
     text-align: center;
+}
+
+#photo {
+    display: none;
+    width: 200px;
+    height: auto;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+#photo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
 }

@@ -9,7 +9,10 @@
 <body>
     <header>
         <div class="header-content">
-            <h1>Omkar Naik</h1>
+            <h1 id="name" onclick="toggleNamePhoto()">Omkar Naik</h1>
+            <div id="photo-container">
+            <img id="photo" src="omkarpic.jpeg" alt="Omkar Naik Photo" onclick="toggleNamePhoto()">
+            </div>
             <p>Contact: onaik240@gmail.com | Phone: 8975324168</p>
         </div>
     </header>
@@ -56,14 +59,22 @@
         <div class="section-content">
             <h2>Projects</h2>
             <ul class="dropdown">
-                <li><a href="#">Mobile development Application (Career Guru)</a></li>
-                <li><a href="#">Smart Irrigation System</a></li>
-                <li><a href="#">Hospital Management System</a></li>
-                <li><a href="#">Mobile development Application (CV Generator)</a></li>
-                <li><a href="#">Quotes App</a></li>
-                <li><a href="#">Society Management App</a></li>
-                <li><a href="#">Fitness Connection App</a></li>
+                <li class="dropdown-btn">Mobile development Application (Career Guru)</li>
+                <li class="dropdown-btn">Smart Irrigation System</li>
+                <li class="dropdown-btn">Hospital Management System</li>
+                <li class="dropdown-btn">Mobile development Application (CV Generator)</li>
+                <li class="dropdown-btn">Quotes App</li>
+                <li class="dropdown-btn">Society Management App</li>
+                <li class="dropdown-btn">Fitness Connection App</li>
             </ul>
+            <div class="project-details">
+                <div id="project1" class="project">
+                    <h3>Mobile development Application (Career Guru)</h3>
+                    <p>Description: A mobile application to help students find the right college and stream.</p>
+                    <p>Technologies: Android Studio, Python, Firebase</p>
+                </div>
+                <!-- Add similar divs for other projects -->
+            </div>
         </div>
     </section>
 
@@ -76,5 +87,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
-
